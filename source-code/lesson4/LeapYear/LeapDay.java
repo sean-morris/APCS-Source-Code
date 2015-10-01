@@ -16,12 +16,8 @@
     // Sets leapDayCount to 1 if monthNumber is equal to 2 and dateInMonth 
     // equals 29. Otherwise leapDayCount is set to 0.
     public void setLeapDay() {
-       
-       if (monthNumber = 2 && dateInMonth == 29) {
-           leapDayCount =1 ;
-        }
-       
-       
+
+              
        
     }
     

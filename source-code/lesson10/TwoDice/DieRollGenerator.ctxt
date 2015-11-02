@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DieRollGenerator()
+comment1.params=
+comment1.target=int\ nextRoll()
+comment2.params=howMany
+comment2.target=void\ tester(int)
+comment3.params=milliseconds
+comment3.target=void\ sleep(long)
+numComments=4

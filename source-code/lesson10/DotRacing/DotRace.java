@@ -53,7 +53,7 @@ public class DotRace extends JPanel {
             mover = whoMoves();
             distance = howFar();
             mover.moved(distance);
-            if (mover.getDistance() + mover.getDiameter() == trackLength + border) {
+            if (mover.getDistance() + mover.getDiameter() >= trackLength + border) {
                 winnaWinnaWinna = mover;
             }
             repaint();
@@ -66,14 +66,14 @@ public class DotRace extends JPanel {
     // whose turn it is to move.
     // finish this
     private Dot whoMoves() {
-           
+ 
     }
     
     
     //  This method returns the number of pixels that the dot moves
     // finish this
     private int howFar() {
-
+    
     }
     
 

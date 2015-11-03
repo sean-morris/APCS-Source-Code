@@ -16,29 +16,17 @@ public class StPeters
         int countBreakEvenOrWin=0;
         while(counter < howMany)
         {
-            pot = 1;
-            if(runGame())
-                countBreakEvenOrWin++;
-            counter++;
+           //your code here
         }
         System.out.println(countBreakEvenOrWin + " broke even or won out of " + howMany + " tries. Chance of winning: " + countBreakEvenOrWin * 1.0 / howMany); 
     }
     
     private boolean runGame(){
-           while(this.flip() == 0)
-           {
-                pot *= 2; //pot = pot * 2;
-           }
-           return pot >= entryFee;
-     }
-    
-    
-    private int flip(){
-        //code to return a 0 or 1 simulating a flip
-        return r.nextInt(2);
+           //your code here
     }
-   
-            
     
-    
+    //code to return a 0 or 1 simulating a flip
+    private int flip(){
+        //your code here
+    }    
 }

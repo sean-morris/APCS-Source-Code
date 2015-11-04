@@ -1,8 +1,8 @@
 #BlueJ package file
 package.editor.height=400
 package.editor.width=560
-package.editor.x=50
-package.editor.y=140
+package.editor.x=41
+package.editor.y=42
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -10,8 +10,8 @@ package.showUses=true
 project.charset=MacRoman
 target1.editor.height=874
 target1.editor.width=1400
-target1.editor.x=182
-target1.editor.y=28
+target1.editor.x=6
+target1.editor.y=27
 target1.height=50
 target1.name=StPeters
 target1.naviview.expanded=true

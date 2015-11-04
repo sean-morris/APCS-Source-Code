@@ -11,17 +11,25 @@ public class StPeters
         this.entryFee = entryFee;
     }
 
+    public void setEntryFee(double fee){
+        this.entryFee = fee;
+    }
+    
     public void tester(int howMany){
         int counter = 0;
         int countBreakEvenOrWin=0;
         while(counter < howMany)
         {
-           //your code here
+           pot = 1;
+           if(runGame() >= this.entryFee)
+                countBreakEvenOrWin++;
+           counter++;
         }
-        System.out.println(countBreakEvenOrWin + " broke even or won out of " + howMany + " tries. Chance of winning: " + countBreakEvenOrWin * 1.0 / howMany); 
+        System.out.println("Entry Fee: " + this.entryFee + " : " + countBreakEvenOrWin + " broke even or won out of " + howMany + " tries. Chance of winning: " + countBreakEvenOrWin * 1.0 / howMany); 
     }
     
-    private boolean runGame(){
+    //returns the amount of money you win in the game
+    private int runGame(){
            //your code here
     }
     

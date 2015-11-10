@@ -1,21 +1,19 @@
 public class MontySim {
 
-    private int myGameCount, myWinTotal;
+    private int myWinTotal;
     
-    public MontySim (int gameCount) {
-        myGameCount = gameCount;
-    }
+ 
     
     //implement this method
-    public void runSimulation ( ) {
+    public void runSimulation (int numGames) {
          Monty m = new Monty();
          int countRuns = 0;
          myWinTotal = 0;
-         while(countRuns < myGameCount){
-             int result = m.playGame();
-             myWinTotal = myWinTotal + result;
-             countRuns++;
+         //you write this...
+         while(){
+  
          }
-         System.out.println((myWinTotal * 1.0)/myGameCount);
+         //stop here...
+         System.out.println((myWinTotal * 1.0)/numGames);
     }
 }      

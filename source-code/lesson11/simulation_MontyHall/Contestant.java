@@ -14,14 +14,14 @@ public class Contestant {
     
     // The contestant makes his/her first guess.
     public int guess1 ( ) {
-        myInitialGuess = myRandoms.nextInt (3) + 1;
+        myInitialGuess = //do this ...;
         control.picture (control.CONTESTANT_CHOICE, myInitialGuess, 0);
         return myInitialGuess;
     }
     
-    // The contestant sticks with his/her first guess.
+    //The contestant sticks, switches, or randomly 
+    //sticks or switches. You find the percentages
     public int guess2 (int openedDoor) {
-        return myInitialGuess;
-        //return 6 - openedDoor - myInitialGuess;
+        //do this ...;
     }
 }

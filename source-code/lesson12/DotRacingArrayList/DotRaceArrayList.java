@@ -47,8 +47,7 @@ public class DotRaceArrayList extends JPanel {
       while (k < racerCount) {
          Dot aDotObject = new Dot(randomName(), k, randomColor(), defaultDiameter);
          // FINISH THIS -- insert the Dot object to the dots ArrayList
-         dots.add(aDotObject);
-         k = k + 1;
+
       }
    }
 
@@ -71,7 +70,7 @@ public class DotRaceArrayList extends JPanel {
    }
 
    public double distanceWon(Dot winner){
-       //loop over dots list...
+       //FINISH THIS: loop over dots list...
        //find the second place Dot
        // subtract the winner distance from second place      
    
@@ -81,7 +80,7 @@ public class DotRaceArrayList extends JPanel {
    private Dot whoMoves() {
       int d = randGen.nextInt(dots.size()); // a number between 0 and one less than the number of dots
       // FINISH THIS: return the Dot pointed to by 'd'
-      return dots.get(d);
+ 
    }
    
    
@@ -166,6 +165,7 @@ public class DotRaceArrayList extends JPanel {
 
    // returns a random element from the someNames ArrayList
    public String randomName() {
+      //FINISH THIS: MAKE SURE IT NEVER REPEATS until all used
       return someNames.get(randGen.nextInt(someNames.size()));
    }
 
@@ -186,6 +186,7 @@ public class DotRaceArrayList extends JPanel {
 
    // returns a random element from the someColors ArrayList
    public Color randomColor() {
+       //FINISH THIS: MAKE SURE IT NEVER REPEATS until all used
       return someColors.get(randGen.nextInt(someColors.size()));
    }
 

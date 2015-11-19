@@ -8,11 +8,12 @@ public class ClickDraw extends JPanel implements MouseListener {
     private ArrayList<Point> points = new ArrayList<Point>();
     private int myWindowWidth = 700;
     private int myWindowHeight = 500;
-    // a) Declaration of an ArrayList of Point objects goes here.
     private int countClose = 0;
+    // a) Declaration and Initialization of an ArrayList of Point objects goes here.
+    
 
     public ClickDraw ( ) {
-        // a) Initialization of an ArrayList of Point objects goes here.
+        
         JFrame easel = new JFrame();      
         easel.setSize (myWindowWidth, myWindowHeight);
         easel.add (this);
@@ -24,7 +25,7 @@ public class ClickDraw extends JPanel implements MouseListener {
         Point p = new Point (event.getX ( ), event.getY ( ));
         if(!clearPoints(p)){
         // b) Adding the point to the ArrayList goes here.
-            points.add(p);
+         
         }
         repaint ( );
     }
@@ -41,9 +42,9 @@ public class ClickDraw extends JPanel implements MouseListener {
         // c) then redraw it (code goes here).
         int x = 0;
         while(x < points.size()){
-            Point p = points.get(x);
+            Point p = //...
             g.fillOval (p.x-5, p.y-5, 10, 10);
-            x++;
+           //....
         }
     }
     
@@ -52,22 +53,9 @@ public class ClickDraw extends JPanel implements MouseListener {
         // d) This method should remove all the points from the ArrayList
         //    if the user clicks the same point(or closeTo) 3 times
         //    It should return true if the points were removed, otherwise false
-        int x = 0;
-        if(points.size() == 0)
-            points.add(p);
+      
         
-        while(x < points.size())
-        {
-            Point temp = points.get(x);
-            if(closeTo(temp.x, temp.y, p.x, p.y)){
-                   this.countClose++;
-                   if(this.countClose == 3){
-                        points.clear();
-                        return true;
-                    }
-            }
-        }
-        return false;
+        
     }
     public void mouseReleased (MouseEvent event) {
     }

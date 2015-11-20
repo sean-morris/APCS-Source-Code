@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 // This program accepts clicks and draws them connected by lines.
 public class ClickDraw extends JPanel implements MouseListener {
-    private ArrayList<Point> points = new ArrayList<Point>();
+
     private int myWindowWidth = 700;
     private int myWindowHeight = 500;
     private int countClose = 0;
@@ -30,8 +30,8 @@ public class ClickDraw extends JPanel implements MouseListener {
         repaint ( );
     }
     
-    private boolean closeTo (int x1, int y1, int x2, int y2) {
-        return Math.abs (x1-x2) < 3 && Math.abs (y1-y2) < 3;
+    private boolean closeTo (Point p1, Point p2) {
+        return Math.abs (p1.x - p2.x) < 3 && Math.abs (p1.y-p2.y) < 3;
     }
        
     public void paintComponent (Graphics g) {

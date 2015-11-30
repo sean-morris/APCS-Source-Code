@@ -1,7 +1,5 @@
 import java.util.*;
 /**
- * this should be a BLUEJ EXERCISE
-
  * Fill in the allSameSuit and the testAllSameSuit methods. Your allTheSameSuit method should use the process
  * neighbors pattern.
  */

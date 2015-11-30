@@ -20,20 +20,6 @@ public class Hand{
     
    public int maxInRank() {
 
-      int maxRankCount = 0;
-      for (int r=2;r<=14;r++){
-         int countNumberOfR=0;    
-         //Your code counts the number of times r occurs in myCards and sets the value to countNumberOfR .
-         
-         for(int x =0; x < myCards.size(); x++)
-            if(myCards.get(x).rank() == r)
-                countNumberOfR++;
-          
-         if (countNumberOfR > maxRankCount) {
-                maxRankCount = countNumberOfR;
-         }
-      }
-      return maxRankCount;
    }
    
    public void testMaxInRank()

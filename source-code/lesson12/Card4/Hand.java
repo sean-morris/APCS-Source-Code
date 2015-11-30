@@ -53,19 +53,7 @@ import java.util.*;
     
     //Complete the following method.
     public void insertInOrder(Card newCard){
-      if(myCards.size() == 0)
-        myCards.add(newCard);
-      else
-      {
-        for(int x = 0; x < myCards.size(); x++){
-            if(newCard.rank() < myCards.get(x).rank())
-            {
-               myCards.add(x, newCard);
-               return;
-            }
-        }
-        myCards.add(newCard);
-    }
+     
     }   
     
     //You should print out the hand to verify it is in order

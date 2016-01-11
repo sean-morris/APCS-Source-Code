@@ -47,9 +47,9 @@ public class Simulation {
 		//this (200);
 	}
 	
-		public static void main (String [ ] args) {
+	public static void main (String [ ] args) {
 		Player p1 = new Player(); 
 		Player p2 = new Player();
-		Simulation s = new Simulation (p1, p2);
+		Simulation s = new Simulation (100, p1, p2);
 	}
 }

@@ -23,7 +23,7 @@ public class Player {
 	
 	public boolean cooperates ( ){
 	   return true;
-	};
+	}
 	
 	public void remember (boolean opponentChoice) {		
 	}

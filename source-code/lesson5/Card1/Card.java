@@ -26,16 +26,20 @@ public class Card {
       }
    }
    
+   public boolean outRanks(Card other) {
+      return this.myRank > other.rank();
+   }
+   
    // returns 'true' if the rank of this card is legal, or false otherwise.
    private boolean isLegalRank (int x) {
-      // you fill this in
+      return x >= 2 && x <= 14;
       
    }
    
    // returns 'true' if the suit of this card is legal, or false otherwise.
    private boolean isLegalSuit (int x) {
       // you fill this in
-      
+        return x >= 0 && x <= 3;
    }
    
    public int rank ( ) {

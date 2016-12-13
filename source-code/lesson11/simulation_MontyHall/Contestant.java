@@ -4,18 +4,15 @@ public class Contestant {
     
     private int myInitialGuess;
     private boolean stay;
-    private Controller control;
     private Random myRandoms;
     
-    public Contestant (Controller c, Random randoms) {
-        control = c;
+    public Contestant (Random randoms) {
         myRandoms = randoms;
     }
     
     // The contestant makes his/her first guess.
     public int guess1 ( ) {
         myInitialGuess = //do this ...;
-        control.picture (control.CONTESTANT_CHOICE, myInitialGuess, 0);
         return myInitialGuess;
     }
     

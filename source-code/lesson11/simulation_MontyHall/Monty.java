@@ -2,16 +2,15 @@ import java.util.*;
 
 public class Monty {
 
-    private Stage stage;
+   
     private Random randoms;
     private Contestant player;
-    private Controller control;
+   
     
     public Monty ( ) {
         Calendar c = Calendar.getInstance ( );
         randoms = new Random (c.getTimeInMillis ( ));
-        control = new Controller ( );
-        player = new Contestant (control, randoms);
+        player = new Contestant (randoms);
     }
     
     // Play the game, returning 1 if the contestant wins and 0 if not.
@@ -30,15 +29,11 @@ public class Monty {
     // Set up the game, returning the position of the car (chosen randomly).
     private int gameStart ( ) {
         int doorWithCar = randoms.nextInt (3) + 1;
-        stage = new Stage (doorWithCar, control);
-        control.picture (control.MONTY_IDLE, 0);
-        control.picture (control.CONTESTANT_THINKING, 3000);
         return doorWithCar;
     }
 
     // Return the contestant's first guess.
     private int playerGuess ( ) {
-        control.say ("Please choose a door.", 0);
         return player.guess1 ( );
     }
     
@@ -46,11 +41,7 @@ public class Monty {
     // Return the number of the newly opened door.
     private int tempt (int doorWithCar, int firstChoice) {
         int doorToOpen;
-        control.say ("You picked door " + firstChoice + ", eh?", 3000);
         doorToOpen = goatDoorToShow (doorWithCar, firstChoice);
-        control.say ("To make things interesting, I'll reveal a goat in door #" + doorToOpen + ".", 0);
-        stage.open (doorToOpen);
-        control.picture (control.MONTY_REVEALING_GOAT, 2000);
         return doorToOpen;
     }
 
@@ -81,15 +72,7 @@ public class Monty {
     // door has a goat.  Return the updated guess.
     private int newGuess (int goatDoor, int firstChoice) {
         int guess;
-        control.say ("Would you like to stick with your guess, or switch? Please choose a door.", 0);
-        control.picture (control.MONTY_HANDLING_CHOICE2, 0);
-        control.picture (control.CONTESTANT_THINKING, 5000);
         guess = player.guess2 (goatDoor);
-        if (guess == firstChoice) {
-            control.say ("Sticking with your guess of " + guess + " ...", 2000);
-        } else {
-            control.say ("You decided to switch to door " + guess + " ...", 2000);
-        }
         return guess;
     }
     
@@ -98,21 +81,9 @@ public class Monty {
     // if the contestant guessed incorrectly.
     // Then reveal the result.  Return 1 if win, 0 if loss.
     private int gameResult (int doorWithCar, int goatDoor, int secondChoice) {
-        control.say ("Let's see what's behind the door you chose, door #" + secondChoice + ".", 3000);
         if (secondChoice == doorWithCar) {
-            stage.open (secondChoice);
-            control.say ("You win!", 0);
-            control.picture (control.MONTY_WIN, 1000);
-            control.picture (control.CONTESTANT_WIN, 0);
             return 1;
         } else {
-            stage.open (secondChoice);
-            control.say ("Oh, no!", 3000);
-            control.say ("Here is the car behind door number " + doorWithCar + ".", 3000);
-            stage.open (doorWithCar);
-            control.say ("Sorry, you lose.", 0);
-            control.picture (control.MONTY_LOSE, 1000);
-            control.picture (control.CONTESTANT_LOSE, 0);
             return 0;
         }
     }

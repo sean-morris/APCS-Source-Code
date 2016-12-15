@@ -60,7 +60,7 @@ public class DotRaceArrayList extends JPanel {
          mover = whoMoves();
          distance = howFar();
          mover.moved(distance);
-         if (mover.getDistance() + mover.getDiameter() == trackLength + border) {
+         if (mover.getDistance() + mover.getDiameter() >= trackLength + border) {
             winnaWinnaWinna = mover;
          }
          repaint();

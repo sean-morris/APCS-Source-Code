@@ -5,13 +5,6 @@ class Card {
 	// each card has a suit and a rank.  The values for these int are specified in the 
 	//  toString method at the bottom of this class.
     private int mySuit, myRank;
-    
-    // constructor when a single index k is provided, between 0 and 51.
-//     public Card (int k) {
-//         mySuit = k / Deck.suitSize;
-//         myRank = k % Deck.suitSize;
-//     }
-    
     // constructor when both rank and suit are provided
     public Card (int r, int s) {
         mySuit = s;
@@ -30,8 +23,8 @@ class Card {
     
 
     // outranks goes here!
-    public boolean outranks(){
-        
+    public boolean outranks(Card other){
+        return true;
         
     }
     

@@ -9,7 +9,7 @@ public class Deck {
     private ArrayList<Card> myCards;
     
     // Used to generate random numbers.
-    private Random randGen;
+    private Random randGen = new Random();
     
 	//Constructor(s) go here
     //Constructor(s) go here
@@ -30,9 +30,15 @@ public class Deck {
     }
     
     //write your code for shuffle here
-    public void shuffle(){
+    public void exchangeShuffle(){
         
     }
+
+        //write your code for shuffle here
+    public void selectionShuffle(){
+        
+    }
+
     
     //write your selection sort here
     public void selectionSort(){

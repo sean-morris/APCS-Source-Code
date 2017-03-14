@@ -153,16 +153,16 @@ public class Helper {
             }
             
             // These temporary arrays are used to update from the RGBImage 
-            int[][] red = new int[width][height];
-            int[][] green = new int[width][height];
-            int[][] blue = new int[width][height];
+            int[][] red = new int[height][width];
+            int[][] green = new int[height][width];
+            int[][] blue = new int[height][width];
             
             // Get red, green, blue components.
             for (int h=0; h<height; h++) {
                 for (int w=0; w<width; w++) {
-                    red[w][h]   = (pixels[h*width+w] >> 16) & 0xff;
-                    green[w][h] = (pixels[h*width+w] >>  8) & 0xff;
-                    blue[w][h]  = (pixels[h*width+w]      ) & 0xff;
+                    red[h][w]   = (pixels[h*width+w] >> 16) & 0xff;
+                    green[h][w] = (pixels[h*width+w] >>  8) & 0xff;
+                    blue[h][w]  = (pixels[h*width+w]      ) & 0xff;
                 }
             }
             setPreferredSize(new Dimension(width, height));
@@ -198,9 +198,9 @@ public class Helper {
             for (int h=0; h<height; h++) {
                 for (int w=0; w<width; w++) {
                     pixels[h*width+w]  = 255         << 24;     // Alpha should be 255.
-                    pixels[h*width+w] += red[w][h]   << 16;
-                    pixels[h*width+w] += green[w][h] << 8;
-                    pixels[h*width+w] += blue[w][h];
+                    pixels[h*width+w] += red[h][w]   << 16;
+                    pixels[h*width+w] += green[h][w] << 8;
+                    pixels[h*width+w] += blue[h][w];
                 }
             }
             ImageProducer ip = new MemoryImageSource(width,height,pixels,0,width);

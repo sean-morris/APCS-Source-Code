@@ -70,50 +70,32 @@ public class RGBImage{
     
     // Example: flips the image vertically.
     public void flipVertical() {
-        int width = red.length;
-        int height = red[0].length;
+        int height = red.length;
+        int width = red[0].length;
         
-        int [][] temp = new int[width][height];
+        int [][] tempR = new int[height][width];
+        int [][] tempB = new int[height][width];
+        int [][] tempG = new int[height][width];
         
         // Flip the red channel.
         for (int h=0;h<height;h++) {
             for (int w=0;w<width;w++) {
-                temp[w][h] = red[w][height-h-1];
+                tempR[h][w] = red[height-h-1][w];
+                tempG[h][w] = green[height-h-1][w];
+                tempB[h][w] = blue[height-h-1][w];
             }
         } 
         for (int h=0;h<height;h++) {
             for (int w=0;w<width;w++) {
-                red[w][h] = temp[w][h];
+                red[h][w] = tempR[h][w];
+                green[h][w] = tempG[h][w];
+                blue[h][w] = tempB[h][w];
             }
         } 
-        
-        // Flip the green channel.
-        for (int h=0;h<height;h++) {
-            for (int w=0;w<width;w++) {
-                temp[w][h] = green[w][height-h-1];
-            }
-        } 
-        for (int h=0;h<height;h++) {
-            for (int w=0;w<width;w++) {
-                green[w][h] = temp[w][h];
-            }
-        } 
-        
-        // Flip the blue channel.
-        for (int h=0;h<height;h++) {
-            for (int w=0;w<width;w++) {
-                temp[w][h] = blue[w][height-h-1];
-            }
-        } 
-        for (int h=0;h<height;h++) {
-            for (int w=0;w<width;w++) {
-                blue[w][h] = temp[w][h];
-            }
-        } 
-        
+                
         // Always do this after manipulating pixels.
         refresh();
     }
 
 
-} 
+}

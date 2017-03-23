@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Board()
+comment1.params=numDisks
+comment1.target=Board(int)
+comment10.params=num\ from\ to\ with
+comment10.target=void\ solveRecursive(int,\ Peg,\ Peg,\ Peg)
+comment11.params=ms
+comment11.target=void\ delay(int)
+comment2.params=
+comment2.target=void\ initialize()
+comment3.params=
+comment3.target=void\ resetDisks()
+comment4.params=
+comment4.target=void\ randomizeDisks()
+comment5.params=g
+comment5.target=void\ paintComponent(java.awt.Graphics)
+comment6.params=from\ to
+comment6.target=boolean\ canMoveDisk(Peg,\ Peg)
+comment7.params=from\ to
+comment7.target=boolean\ moveDisk(Peg,\ Peg)
+comment8.params=size
+comment8.target=Peg\ getPegWith(int)
+comment9.params=
+comment9.target=void\ resetAndSolve()
+numComments=12

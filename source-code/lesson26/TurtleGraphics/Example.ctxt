@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Example()
+comment1.params=depth\ turtle\ length
+comment1.target=void\ drawFractal(int,\ Turtle,\ double)
+numComments=2

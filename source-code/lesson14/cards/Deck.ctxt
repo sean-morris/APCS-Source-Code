@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Deck()
+comment1.params=
+comment1.target=void\ reset()
+comment2.params=
+comment2.target=void\ perfectShuffle()
+comment3.params=
+comment3.target=void\ exchangeShuffle()
+comment4.params=
+comment4.target=void\ selectionShuffle()
+comment5.params=
+comment5.target=void\ selectionSort()
+comment6.params=
+comment6.target=void\ insertionSort()
+comment7.params=
+comment7.target=void\ countingSort()
+comment8.params=
+comment8.target=void\ print()
+numComments=9

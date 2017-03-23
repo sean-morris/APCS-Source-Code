@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=width\ height\ left\ top\ numDisks
+comment0.target=Peg(int,\ int,\ int,\ int,\ int)
+comment1.params=width\ height\ left\ top
+comment1.target=void\ setBounds(int,\ int,\ int,\ int)
+comment2.params=d
+comment2.target=boolean\ canPlace(Disk)
+comment3.params=d
+comment3.target=void\ place(Disk)
+comment4.params=
+comment4.target=Disk\ getTop()
+comment5.params=
+comment5.target=Disk\ removeTop()
+comment6.params=
+comment6.target=void\ removeAll()
+comment7.params=g
+comment7.target=void\ draw(java.awt.Graphics)
+numComments=8

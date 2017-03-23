@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=rank\ suit
+comment0.target=Card(int,\ int)
+comment1.params=other
+comment1.target=boolean\ outRanks(Card)
+comment2.params=x
+comment2.target=boolean\ isLegalRank(int)
+comment3.params=x
+comment3.target=boolean\ isLegalSuit(int)
+comment4.params=
+comment4.target=int\ rank()
+comment5.params=
+comment5.target=int\ suit()
+numComments=6

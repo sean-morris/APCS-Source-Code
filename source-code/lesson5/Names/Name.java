@@ -28,8 +28,7 @@ public class Name {
    // that is, making sure it starts with a capital letter and
    // has only lower-case letters after the first.
    private String caseFixed (String namePart) {
-      String temp;
-      temp = namePart.toLowerCase().trim();
+      String temp = namePart.toLowerCase().trim();
       return temp.substring(0,1).toUpperCase() + temp.substring(1);
    }
 }

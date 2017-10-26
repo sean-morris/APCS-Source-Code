@@ -165,7 +165,7 @@ public class VirtualPetFace extends JFrame implements ActionListener{
     public void getImages(final String mood) {
     
         for (int i = 0; i < files.length; i++) {
-            if (files[i].contains(mood)) {
+            if (files[i].startsWith("pet_" + mood)) {
                 pics.add(allPics[i]);
             }
         }

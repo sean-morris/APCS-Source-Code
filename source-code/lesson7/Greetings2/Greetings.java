@@ -16,18 +16,18 @@ public class Greetings extends JPanel {
    }
    
    public void paintComponent (Graphics g) {
-      g.drawString ("Hi there!", 150, 200);	
+      
    }
    
    
    // Step 25 Write newDrawRect2 here, which calls drawLine four times.
-   public void newDrawRect(int tlx, int tly, int width, int height) {
+   public void newDrawRect(Graphics g, int tlx, int tly, int width, int height) {
       
    }
    
    // Step 26 This method takes top-left x, top-left y, bottom-right x, bottom-right y to define
    //  a rectangle.  It should take drawRect.
-   public void newDrawRect(int tlx, int tly, int brx, int bry) {
+   public void newDrawRect2(Graphics g, int tlx, int tly, int brx, int bry) {
       
    }
 

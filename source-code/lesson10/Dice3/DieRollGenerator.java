@@ -8,21 +8,20 @@ public class DieRollGenerator {
     public DieRollGenerator ( ) {
         randGen = new Random ( );
     }
-    
-	
-	//Don't forget to add a parameter here!
-    public int nextRoll( ) {
-      // You supply this code.
+    public int forbiddenRoll(int forbidden){
+	//your code here.    
+    }
 
-	  
-	  
-   }
+    public int nextRoll( ) {
+      return randGen.nextInt(6) +1;
+    }
     
    public void tester (int howMany) {
 	  int k;
 	  k = 0;
+	  int f = (int)(Math.random() * 6) + 1;
 	  while (k < howMany) {
-	     System.out.println (nextRoll ( ));
+	     System.out.println (forbiddenRoll(f));
 	     k = k + 1;
 	  }
    }

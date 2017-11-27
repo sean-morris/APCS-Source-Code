@@ -5,14 +5,13 @@ public class StPeters
     private Random r = new Random();
     private double entryFee;
     private int pot = 1;
-    
-    public StPeters(double entryFee)
-    {
-        this.entryFee = entryFee;
+   
+    public StPeters(double fee){
+        this.entryFee = fee;    
     }
-
-    public void setEntryFee(double fee){
-        this.entryFee = fee;
+    
+    public void optimizeEntryFee(){
+        //your code here -- after you write and test runGame() and flip()
     }
     
     public void tester(int howMany){

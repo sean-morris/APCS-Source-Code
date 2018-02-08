@@ -8,10 +8,15 @@
 public class Simulation {
 
     final static boolean DEBUGGING = false;
+    Player p1 = new Player( );
+    Player p2 = new Player ( );
     
-    public Simulation (int gameCount,Player p1, Player p2) {
-        //Player p1 = new Player( );
-        //Player p2 = new Player ( );
+    public Simulation ( ) {
+        this (200);
+    }
+    
+    public Simulation (int gameCount) {
+
         for (int k=0; k<gameCount; k++) {
             boolean p1cooperated = p1.cooperates ( );
             boolean p2cooperated = p2.cooperates ( );
@@ -44,13 +49,5 @@ public class Simulation {
         System.out.println ("Player 2 has " + p2.score ( ));
     }
     
-    public Simulation ( ) {
-        //this (200);
-    }
-    
-    public static void main (String [ ] args) {
-        Player p1 = new Player(); 
-        Player p2 = new Player();
-        Simulation s = new Simulation (100, p1, p2);
-    }
+
 }
